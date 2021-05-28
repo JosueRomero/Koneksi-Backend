@@ -1,0 +1,88 @@
+User{
+   "_id": String,
+   "name": String,
+   "surname": String,
+   "email": String,
+   "password": String,
+   "image": String,
+   "type": String,
+   "lat":int,
+   "len":int,
+   "last_time_connected": Date,
+   "created_at": Date
+}
+
+socialMedia{
+   "User": User,
+   "social_media" : String
+}
+
+
+
+UserJob{
+   "_id": String,
+   "user": User,
+   "type": Jobs,
+   "description": String,
+   "schedule":String,
+   "tags": String[]
+}
+
+Jobs{
+   "_id":String,
+   "name": String
+}
+
+UserProducts{
+   "_id": String,
+   "user": User,
+   "name": String,
+   "image":String,
+   "price":int,
+   "description": String,
+   "tags": String[]
+}
+
+UserServices{
+   "_id": String,
+   "user": User,
+   "description": String,
+   "schedule":String,
+   "images":String,
+   "tags": String[]
+}
+
+Messages{
+   "_id":String,
+   "emitter":User,
+   "receiver":User,
+   "text":String,
+   "created_at":Date,
+   "checked": Boolean
+}
+
+
+Favorites{
+   "_id":String,
+   "user": User,
+   "userSaved":User
+}
+
+Rating{
+   "_id":String,
+   "emitter":User,
+   "receiver":User,
+   "rating":int
+}
+
+Comments{
+   "_id":String,
+   "emitter":User,
+   "receiver":User,
+   "created_at":String,
+   "text":String
+}
+
+
+
+
